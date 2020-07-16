@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "git push origin master"
+    "build": "tsc && git add .",
+    "publish": "git push origin master",
+    "pull": "git pull origin master"
   },
   "repository": {
     "type": "git",

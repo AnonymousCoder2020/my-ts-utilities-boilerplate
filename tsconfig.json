@@ -3,13 +3,16 @@
     "baseUrl": "./",
     "target": "es2018",
     "strict": true,
+    "skipLibCheck": true,
     "module": "esnext",
+    "rootDir": "./src",
     "outDir": "./dist/",
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
+    "declaration": true,
     "alwaysStrict": true,
     "strictNullChecks": true,
+    "newLine": "lf",
     "jsx": "react",
     "lib": ["es2020.string", "esnext", "dom", "dom.iterable"],
     "paths": {
@@ -25,5 +28,6 @@
     ],
     "experimentalDecorators": true
   },
-  "includes": ["types/*", "src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": ["src"],
+  "exclude": ["tests"]
 }
