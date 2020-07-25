@@ -8,7 +8,8 @@
     "build": "tsc && git add .",
     "set-url": "git remote set-url origin",
     "check-url": "git remote -v",
-    "publish": "git push origin master",
+    "merge": "git merge origin master --allow-unrelated-histories",
+    "push": "git push origin master",
     "pull": "git pull origin master"
   },
   "repository": {
