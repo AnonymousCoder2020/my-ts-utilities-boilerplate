@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "node --loader ts-node/esm.mjs scripts/setup.ts",
     "build": "tsc && git add .",
     "set-url": "git remote set-url origin",
     "check-url": "git remote -v",
