@@ -28,6 +28,6 @@
     ],
     "experimentalDecorators": true
   },
-  "include": ["src"],
+  "include": ["src", "scripts"],
   "exclude": ["tests"]
 }
