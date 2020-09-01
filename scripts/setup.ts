@@ -10,11 +10,14 @@ import { promises as fs } from 'fs'
   fixStringProp(packageJSON.bugs, 'url')
   fixStringProp(packageJSON, 'homepage')
   await fs.writeFile('../package.json', JSON.stringify(packageJSON))
-  exec(`git remote set-url origin https://github.com/AnonymousCoder2020/${repositoryName}`, (err, stdout, stderr) => {
-    if (err) {
-      console.log(`(setup.ts error): ${stderr}`)
-      return
+  exec(
+    `git remote set-url origin https://github.com/AnonymousCoder2020/${repositoryName} && git merge origin master --allow-unrelated-histories`,
+    (err, stdout, stderr) => {
+      if (err) {
+        console.log(`(setup.ts error): ${stderr}`)
+        return
+      }
+      console.log(`(setup.ts message): ${stdout}`)
     }
-    console.log(`(setup.ts message): ${stdout}`)
-  })
+  )
 })()
