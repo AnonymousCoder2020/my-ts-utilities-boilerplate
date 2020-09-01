@@ -2,6 +2,7 @@ import { exec } from 'child_process'
 import { promises as fs } from 'fs'
 ;(async () => {
   const [, , repositoryName] = process.argv
+  if (!repositoryName) return
   const fixStringProp = (obj: { [any: string]: string }, key: string) => {
     obj[key] = obj[key].replace(/my-react-ts-boilerplate/, repositoryName)
   }
