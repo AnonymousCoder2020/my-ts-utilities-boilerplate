@@ -7,6 +7,7 @@ import { promises as fs } from 'fs'
     obj[key] = obj[key].replace(/my-react-ts-boilerplate/, repositoryName)
   }
   const packageJSON = JSON.parse(await fs.readFile('./package.json', 'utf-8'))
+  packageJSON.name = repositoryName
   fixStringProp(packageJSON.repository, 'url')
   fixStringProp(packageJSON.bugs, 'url')
   fixStringProp(packageJSON, 'homepage')
