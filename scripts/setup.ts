@@ -11,7 +11,7 @@ import { promises as fs } from 'fs'
   packageJSON.homepage = `${repositoryPath}#readme`
   await fs.writeFile('./package.json', JSON.stringify(packageJSON, null, '  '))
   exec(
-    `git remote set-url origin https://github.com/AnonymousCoder2020/${repositoryName} && git merge origin master --allow-unrelated-histories`,
+    `npm i && git remote set-url origin https://github.com/AnonymousCoder2020/${repositoryName} && git merge origin master --allow-unrelated-histories`,
     (err, stdout, stderr) => {
       if (err) {
         console.log(`(setup.ts error): ${stderr}`)
